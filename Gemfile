@@ -43,6 +43,11 @@ gem "rack-cors"
 
 group :development, :test do
   gem 'pry'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails', '~> 6.1'
+  gem 'faker'
+  gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
