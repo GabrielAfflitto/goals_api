@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :users
-
-  post '/auth/login', to: 'authenticate#login'
+  post '/auth/login', to: 'authentication#login'
 end
