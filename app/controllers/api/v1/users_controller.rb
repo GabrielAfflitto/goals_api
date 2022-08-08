@@ -17,7 +17,6 @@ class Api::V1::UsersController < ApplicationController
   end
 
   #post /users
-
   def create
     @user = User.new(user_params)
     if @user.save
@@ -29,15 +28,16 @@ class Api::V1::UsersController < ApplicationController
   end
 
 
-  def update
-    unless @user.update(user_params)
-      render json: {errors: @user.errors.full_messages},
-        status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   unless @user.update(user_params)
+  #     render json: {errors: @user.errors.full_messages},
+  #       status: :unprocessable_entity
+  #   end
+  # end
 
   #delete /users/id
   def destroy
+    @user = User.find(params[:id])
     @user.destroy
   end
 
