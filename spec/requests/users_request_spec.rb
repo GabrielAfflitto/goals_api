@@ -37,7 +37,7 @@ RSpec.describe 'Users', type: :request do
      end
      it 'returns a validation failure message' do
        expect(response.body)
-      .to include("is too short (minimum is 3 characters)")
+      .to include("Password is too short (minimum is 8 characters)")
      end
    end
  end
