@@ -7,4 +7,7 @@ class User < ApplicationRecord
   validates :name, presence: true
 
 
+  # later on, add business logic to the so a user can filter their goals by in progress or completed
+
+
 end
